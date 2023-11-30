@@ -1,13 +1,13 @@
 # Bilgisayar Ağı Temel Bilgiler
 
--[Protokol Nedir?](#protokol-nedir)
--[Mac ve Ip Adresi Nedir?](#mac-ve-ip-adresi-nedir)
--[NAT Nedir?](#nat-nedir)
--[Default Gateway Nedir?](#default-gateway-nedir)
--[Subnet Mask Nedir?](#subnet-mask-nedir)
--[DHCP Nedir?](#dhcp-nedir)
--[DHCP Nedir?](#dhcp-nedir)
--[Port Nedir?](#port-nedir)
+- [Protokol Nedir?](#protokol-nedir)
+- [Mac ve Ip Adresi Nedir?](#mac-ve-ip-adresi-nedir)
+- [NAT Nedir?](#nat-nedir)
+- [Default Gateway Nedir?](#default-gateway-nedir)
+- [Subnet Mask Nedir?](#subnet-mask-nedir)
+- [DHCP Nedir?](#dhcp-nedir)
+- [DHCP Nedir?](#dhcp-nedir)
+- [Port Nedir?](#port-nedir)
 
 
 ## Protokol Nedir? 
