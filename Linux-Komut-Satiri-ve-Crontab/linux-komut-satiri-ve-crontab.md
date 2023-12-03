@@ -20,7 +20,7 @@
 Bunlardan bazıları şunlardır:
 
 - -l: Dosyaları detaylı bir şekilde listeler.
-- -a: Gizli dosyaları da (. ile başlayan dosyaları) listeler.
+- -a: Gizli dosyaları da (`.` ile başlayan dosyaları) listeler.
 - -h: Dosya boyutlarını insan okunabilir formatta gösterir.
 - -R: Alt dizinler de dahil olmak üzere tüm dizin ağacını listeler.
 - -t: Dosyaları değiştirilme zamanına göre sıralar.
