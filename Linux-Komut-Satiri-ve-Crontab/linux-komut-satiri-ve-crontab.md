@@ -2,6 +2,8 @@
 - [Linux Temel Komutlari](#linux-temel-komutlari)
 - [Degiskenler](#degiskenler)
 - [PATH Degiskeni](#path-degiskeni)
+- [grep ile regex](#grep-ile-regex)
+- [Dosya ve Klasor Islemleri](#dosya-ve-klasor-islemleri)
 
 
 ## Linux Temel Komutlari
@@ -155,3 +157,116 @@ ls is aliased to `ls --color=auto'
 Bu çıktıda, ls komutunun bir alias olduğunu ve `ls --color=auto` komutunu çağırdığını belirtir.
 
 Bu komutlar, terminalde belirli bir komutun hangi dosya veya komut tipiyle ilişkilendirildiğini bulmak için kullanılır. PATH değişkeni, bu komutların çalıştırılabilir dosyalarını bulmak için belirli bir sırayla dizinleri tarar ve komutların yerel olarak nerede olduğunu belirler.
+
+## grep ile regex
+
+`grep`, Linux sistemlerinde metin tabanlı verilerde belirli bir deseni veya kelimeyi aramak için kullanılan bir komuttur. Genellikle metin dosyalarında veya komut çıktılarında belirli bir deseni veya kelimeyi bulmak için kullanılır.
+
+Temel kullanımı şu şekildedir:
+```bash
+grep "aranacak_kelime" dosya_adı
+```
+Bu komut, `dosya_adı` içinde `aranacak_kelime` desenini arar
+
+grep, Unix/Linux sistemlerinde metin tabanlı verilerde belirli bir deseni veya kelimeyi aramak için kullanılan bir komuttur. Genellikle metin dosyalarında veya komut çıktılarında belirli bir deseni veya kelimeyi bulmak için kullanılır.
+
+Temel kullanımı şu şekildedir:
+
+bash
+Copy code
+grep "aranacak_kelime" dosya_adı
+Bu komut, dosya_adı içinde aranacak_kelime desenini arar. Örneğin:
+
+bash
+Copy code
+grep "hata" logdosyasi.txt
+Bu komut, logdosyasi.txt içinde "hata" kelimesini arar ve eşleşen tüm satırları gösterir.
+
+`grep` ayrıca birçok seçeneğe ve kullanım varyasyonuna sahiptir. Örneğin:
+
+- `-i` seçeneği: Büyük/küçük harf duyarlılığını yok sayarak arama yapar.
+ ```bash
+  grep -i "HATA" logdosyasi.txt
+  ```
+- `-r` seçeneği: Belirtilen dizinler altındaki dosyalarda rekurzif olarak arama yapar.
+ ```bash
+  grep -r "hata" /home/kullanici/dizin
+  ```
+- `-n` seçeneği: Eşleşen satırların numaralarını gösterir.
+ ```bash
+  grep -n "hata" logdosyasi.txt
+  ```
+- `-v` seçeneği: Eşleşmeyen satırları gösterir.
+ ```bash
+  grep -v "hata" logdosyasi.txt
+  ```
+- `-E` seçeneği: Düzenli ifadeleri kullanmanızı sağlar.
+ ```bash
+  grep -E "pattern1|pattern2" dosya.txt
+  ```
+ `regular expressions` veya kısaca `regex` (Düzenli ifadeler), metin tabanlı verilerde belirli desenleri tanımlamak için kullanılan özel bir dil ve yapıdır. grep gibi arama işlemlerinde, belirli bir deseni veya kalıbı tanımlamak için kullanılırlar. Örneğin, grep komutunu düzenli ifadelerle kullanarak daha karmaşık arama işlemleri gerçekleştirebilirsiniz.
+
+- Rakam Arama: Metin içinde rakamları bulmak için regex kullanımı.
+  ```bash
+  grep "[0-9]" dosya.txt
+  ```
+   Bu ifade, `dosya.txt`  içinde herhangi bir rakamı bulur.
+
+- Kelime Başlangıcı ve Bitişi: Bir metinde belirli bir kelimenin başlangıcını veya bitişini bulmak için regex kullanımı.
+  ```bash
+  grep "\<pattern" dosya.txt
+  ```
+   Bu ifade, `dosya.txt` içinde pattern ile başlayan kelimeleri bulur.
+
+  ```bash
+  grep "pattern\>" dosya.txt
+  ```
+   Bu ifade ise `dosya.txt` içinde pattern ile biten kelimeleri bulur.
+
+- Birden Fazla Karakter Arama: Belirli bir deseni içeren birden fazla karakteri bulmak için regex kullanımı.
+  ```bash
+  grep "a.*b" dosya.txt
+  ```
+  Bu ifade, `dosya.txt` içinde "a" ile başlayıp "b" ile biten herhangi bir karakter dizisini bulur.
+
+- Özel Karakterlerin Kaçışı: Özel karakterlerin aranması için kaçış karakteri kullanımı.
+  ```bash
+  grep "\." dosya.txt
+  ```
+   Bu ifade, `dosya.txt` içinde nokta karakterini bulur. Nokta normalde herhangi bir karakteri temsil eder, ancak \ ile birlikte kullanılarak özel anlamından 
+   çıkartılır ve gerçek nokta karakterini arar.
+
+- Belirli Karakter Sayısını Arama: Belirli bir karakter sayısını aramak için {} kullanımı.
+  ```bash
+  grep "a\{3\}" dosya.txt
+  ```
+   Bu ifade, `dosya.txt` içinde üç ardışık `a` karakterini bulur.
+
+- Satır Başlangıcı ve Bitişi: Bir metinde satır başlangıcı veya bitişini belirtmek için ^ ve $ kullanımı.
+  ```bash
+  grep "^pattern" dosya.txt
+  ```
+   Bu ifade, `dosya.txt` içindeki satırlarda `pattern` ile başlayanları bulur.
+
+  ```bash
+  grep "pattern$" dosya.txt
+  ```
+  Bu ifade, `dosya.txt` içindeki satırlarda `pattern` ile bitenleri bulur.
+
+Bu örnekler, `grep` komutuyla kullanılan farklı `regex` örneklerindendir. Düzenli ifadeler çok çeşitli kullanımlara sahip olduğundan, daha karmaşık aramalar ve desenler oluşturabilirsiniz.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
