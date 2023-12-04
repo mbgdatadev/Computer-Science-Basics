@@ -7,8 +7,8 @@
 - [sed Komutu](#sed-komutu)
 - [Pipe Nedir](#pipe-nedir)
 - [Direction Nedir](#direction-nedir)
-- [Compression(gzip)](#compression(gzip))
--  [Archive(tar)](#archive)
+- [Compression-gzip](#compression-gzip)
+-  [Archive-tar](#archive-tar)
 
 ## Linux Temel Komutlari
 
@@ -416,7 +416,7 @@ ls qwe &>> dosya.txt
 ```
 Bu komut dosya içerisine  bu hatayı `ls: cannot access 'wqe': No such file or directory` ekler 
 
-## Compression(gzip)
+## Compression-gzip
 `gzip`, Linux sistemlerinde sıkıştırma ve arşivleme işlemleri için kullanılan bir komut ve aynı zamanda bir dosya formatıdır. Genellikle dosyaların boyutunu azaltmak veya birden fazla dosyayı tek bir dosyada saklamak için kullanılır.
 
 - Bir Dosyayı Sıkıştırmak
@@ -448,7 +448,7 @@ gzip -d dosya.gz
 `gunzip` veya `gzip -d` komutu, `dosya.txt.gz` adlı sıkıştırılmış dosyayı açar ve `dosya.txt` adında orijinal dosyayı oluşturur.
 
 
-## Archive(tar)
+## Archive-tar
 
 
 
