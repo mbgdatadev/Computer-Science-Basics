@@ -7,6 +7,8 @@
 - [sed Komutu](#sed-komutu)
 - [Pipe Nedir](#pipe-nedir)
 - [Direction Nedir](#direction-nedir)
+- [Compression(gzip)](#compression)
+-  [Archive(tar)](#archive)
 
 ## Linux Temel Komutlari
 
@@ -414,17 +416,39 @@ ls qwe &>> dosya.txt
 ```
 Bu komut dosya içerisine  bu hatayı `ls: cannot access 'wqe': No such file or directory` ekler 
 
+## Compression(gzip)
+`gzip`, Linux sistemlerinde sıkıştırma ve arşivleme işlemleri için kullanılan bir komut ve aynı zamanda bir dosya formatıdır. Genellikle dosyaların boyutunu azaltmak veya birden fazla dosyayı tek bir dosyada saklamak için kullanılır.
+
+- Bir Dosyayı Sıkıştırmak
+```bash
+gzip dosya.txt
+```
+Bu komut, `dosya.txt` dosyasını sıkıştırır ve `dosya.txt.gz` adında sıkıştırılmış bir dosya oluşturur. Orijinal dosya silinmez, sadece sıkıştırılmış versiyonu eklenir.
+
+- Birden Fazla Dosyayı Sıkıştırmak
+  ```bash
+   gzip dosya1.txt dosya2.txt dosya3.txt
+  ```
+Bu komut, `dosya1.txt`, `dosya2.txt` ve `dosya3.txt` dosyalarını sıkıştırır ve her biri için ayrı sıkıştırılmış dosyalar oluşturur (`dosya1.txt.gz, dosya2.txt.gz, dosya3.txt.gz`).
+
+- Bir Klasör İçinde Birden Fazla Dosyayı Sıkıştırmak
+    ```bash
+   gzip -r yeni_Klasor/
+  ```
+  `yeni_klasor` dizininde bulunan her dosyayı sıkıştırır.
+  
+- Sıkıştırılmış Bir Dosyayı Açmak
+```bash
+gunzip dosya.txt
+```
+```bash
+gzip -d dosya.gz
+```
+
+`gunzip` veya `gzip -d` komutu, `dosya.txt.gz` adlı sıkıştırılmış dosyayı açar ve `dosya.txt` adında orijinal dosyayı oluşturur.
 
 
-
-
-
-
-
-
-
-
-
+## Archive(tar)
 
 
 
