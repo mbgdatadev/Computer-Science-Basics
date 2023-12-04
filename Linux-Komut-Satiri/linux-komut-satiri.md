@@ -7,7 +7,7 @@
 - [sed Komutu](#sed-komutu)
 - [Pipe Nedir](#pipe-nedir)
 - [Direction Nedir](#direction-nedir)
-- [Compression(gzip)](#compression)
+- [Compression(gzip)](#compression(gzip))
 -  [Archive(tar)](#archive)
 
 ## Linux Temel Komutlari
